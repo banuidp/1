@@ -2,7 +2,7 @@
 
 angular.module('cosla').controller('attSignTimeCtrl',function($scope, Restangular, $routeParams, $filter) {
     $scope.showName = 'attSignTime';
-    $scope.titleName = "签到签退";
+    $scope.titleName = "签到签退!";
     $scope.signIn = {};
     //当天日期
     $scope.todayTime = commonDateFormat(true, 0, 0, 0);
@@ -115,7 +115,7 @@ angular.module('cosla').controller('attSignTimeCtrl',function($scope, Restangula
             }
         }
        if($scope.randCheckCode==null||$scope.randCheckCode==""){
-    	   alert("请输入验证码");
+    	   alert("请输入验证码!!");
        }else{
     	   Restangular.one('userAttendanceConfig/queryBySignIn/'+ type+'/'+$scope.randCheckCode).get().then(function(result) {
                if (result == undefined) {
